@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
       <h1>Upcoming Angular Events</h1>
       <hr />
       <event-thumbnail
+        #thumbnail
         [event]="event1"
         (eventClick)="handleEventClicked($event)"
       ></event-thumbnail>
+      <h3>{{ thumbnail.gibberish }}</h3>
+      <button class="btn btn-primary" (click)="thumbnail.logFoo()">
+        Log Foo
+      </button>
     </div>
   `,
 })

@@ -23,7 +23,13 @@ export class EventThumbnailComponent {
   @Input() event: any;
   @Output() eventClick = new EventEmitter();
 
+  gibberish = `Log Foo Bar`;
+
   handleClickMe() {
     this.eventClick.emit(this.event.name);
+  }
+
+  logFoo() {
+    console.log('foo');
   }
 }
